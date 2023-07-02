@@ -13,6 +13,9 @@ html{
 
 body{
     background-color: #F5F5F5;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Barra de Navegação */
@@ -69,6 +72,37 @@ header{
     transition: 0.7s;
 }
 
+/* Barra de Navegação Responsividade*/
+
+@media (max-width: 1000px) {
+  header {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .container-logo {
+    margin-bottom: 10px;
+  }
+
+  .nav {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .nav li,
+  .nav2 li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .nav li a,
+  .nav2 li a {
+    padding: 10px 20px;
+    border-radius: 15px;
+  }
+}
+
+
 /* Seção 1 */
 
 .seção1{
@@ -105,14 +139,12 @@ header{
 
 .conteudo1 h2{
     color: rgb(255, 255, 255);
-    font-family: 'Montserrat', sans-serif; 
     font-size: 60px; 
     font-weight: 700; 
     margin-bottom: 10px;
 }
 
 .conteudo1 p{
-    font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     line-height: 1.5;
     text-align: center;
@@ -120,97 +152,108 @@ header{
     
 }
 
-/* Seção 2 */
+/* Seção1  Responsividade*/
 
+
+@media (max-width: 767px) {
+  .conteudo1 {
+    padding: 50px;
+  }
+
+  .conteudo1 h2 {
+    font-size: 40px;
+  }
+
+  .conteudo1 p {
+    font-size: 18px;
+  }
+}
+
+
+/* Seção 2 */
 .seção2 {
-    background-color: #F9F9F9;
-    padding: 50px 0;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
+  background-color: #F9F9F9;
+  padding: 50px 0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .conteudo2 {
-    max-width: 960px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .conteudo2 h2 {
-    font-size: 60px;
-    margin-bottom: 40px; 
-    margin-top: 0;
-    font-family: 'Montserrat', sans-serif;  
-  }
-  
+  font-size: 60px;
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+
 .funcionalidades {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
 .funcionalidades-esquerda,
 .funcionalidades-meio,
 .funcionalidades-direita {
-    flex-basis: 33.33%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-  }
-  
+  flex-basis: 30.00%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
 .funcionalidades ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #362C75;
-    color: #FFFFFF; 
-    border-radius: 10px; 
-    padding: 20px; 
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
-    border: 2px solid #4D49CC;
-  }
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #362C75;
+  color: #FFFFFF;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  border: 2px solid #4D49CC;
+}
 
 .funcionalidades li {
-    font-size: 20px;
-    margin-bottom: 10px;
-    padding: 20px;
-    align-items: center;
-    display: inline-flex;
-    flex-basis: 80%;
-  }
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 20px;
+  align-items: center;
+  display: inline-flex;
+  flex-basis: 80%;
+}
 
-.funcionalidades-esquerda::before,
-.funcionalidades-meio::before,
-.funcionalidades-direita::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    background-color: #F9F9F9;
-    border: 2px solid #707070;
-    border-radius: 10px;
-    z-index: -1;
-    margin: 10px;
-  }
+/* Seção2  Responsividade*/
 
+@media (max-width: 767px) {
+  .funcionalidades-esquerda,
+  .funcionalidades-meio,
+  .funcionalidades-direita {
+    flex-basis: 100%;
+  }
+}
+  
   /* Seção 3 */
   
   .seção3 {
-    margin-top: 2vh;
+    margin-top: 50px; 
     position: relative;
     background-size: cover;
     background-position: center;
-    padding: 50px 0;
+    padding: 100px 0;
+    overflow: hidden;
+    height: auto;
   }
   
   .imagem-fundo2 {
@@ -219,9 +262,9 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    height: 107vh;
     filter: blur(8px);
     z-index: -1;
+    bottom: -100px;
   }
   
   .conteudo3 {
@@ -233,7 +276,6 @@ header{
     width: 70%;
     margin: 0 auto;
     z-index: 1;
-    font-family: 'Montserrat', sans-serif;
   }
   .h2-1{
     color: white;
@@ -284,7 +326,6 @@ header{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
-
   .retangulo {
     position: absolute;
     top: 0;
@@ -321,3 +362,120 @@ header{
   .botao-assinar:hover {
     background-color: #6A3F8D;
   }
+
+/* Seção3  Responsividade*/
+
+
+  @media (max-width: 1300px) {
+    .conteudo3 {
+        width: 90%;
+        margin-top: 600px;
+    }
+
+    .colunas {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .coluna {
+        width: 100%; 
+        margin-bottom: 30px;
+    }
+    .seção3 {
+      height: 2200px;
+    }
+}
+
+/* Seção 4 */
+
+.seção4 {
+  background-color: #F9F9F9;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.container-contato {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.container-contato h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.formulario-contato {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.campos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.campo {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.campo label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.campo .exemplo {
+  font-size: 14px;
+  color: #888888;
+  margin-top: 5px;
+}
+
+.campo button {
+  background-color: #4C297C;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.campo button:hover {
+  background-color: #6A3F8D;
+}
+
+/* footer */
+
+footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 0;
+  width: 100%;
+  height: 120px;
+  background-color: black;
+  color: white;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+}
+
